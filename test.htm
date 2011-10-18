@@ -1,0 +1,97 @@
+<!DOCTYPE html >
+
+<html >
+<head>
+	<title>Demo INPUTCLEARBUTTON</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.InputClearButton.min.js"></script>
+ <style>
+ body{
+  font-family: sans-serif;
+ }
+ .input-container{
+    position: relative;
+    display: inline;
+}
+
+.inline-input-button{
+	  display: inline;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: auto;
+    border: 1px none;
+    border-radius: 0.7em; 
+    position: relative;
+    font-size: 100%;
+    width: 1em;
+    height: 1em;
+    line-height:normal;
+    vertical-align: middle;
+ }
+.clear {
+    background-image: url(action_delete.png);
+    margin-left: -4px;
+    visibility: hidden;
+    zoom: 1;  
+    filter: alpha(opacity=0); 
+    opacity: 0;
+   
+}
+.clear:hover, #clear:focus {
+	border-color: #BBBBB0 #BBBBB0 #666666;
+	background-color: #F2F2F2
+}
+.clear:active{
+	background-color: #E1E9DA
+}
+ </style>	
+
+</head>
+<body>
+    <h2>Jquery InputClearButton</h2>
+    <p>Version 0.1</p>
+    <p>Copyright (c) 2011 Stephan Kuehne<br/>
+       Dual licensed under the MIT and GPL licenses.<br/>
+       Uses the same license as jQuery, see:<br/>
+       <a href="http://docs.jquery.com/License" >http://docs.jquery.com/License</a>
+    </p>
+		<div class="input-container">
+			<input type="text" name="search" id="search" class="search" value="" />
+			<button id="clear" class="inline-input-button clear" for="search"></button>
+		</div>
+    <hr/>
+    <br/>
+   	<div class="input-container">
+			<input type="text" name="search2" id="search2" class="search" value="" />
+			<button id="clear2" class="inline-input-button clear" for="search2"></button>
+    </div>
+    <hr/>
+    <p>Besides all the standards, the  button reacts on cut & paste <br/>and the long Delete/Remove Key press.</p>
+    <p>  To match the Button to the corresponding Inputfield (Text) or Textarea<br/>
+     just add to the tag of the button or div the attribute <strong>for</strong> with the id-value of the Button.
+    </p>
+    <pre>
+    &lt;input type="text" id="input_id" /&gt;
+    &lt;button id="clear" for="input_id"&gt;&lt;/button&gt;
+    </pre>
+    
+    <hr/>
+    <h3>Credits:</h3>
+    <p> The Style of the Button is up to you.<br/>
+    The Icon is from the ICOJOY Freeweb development icons #1 Edition,<br/>
+    which you find here <a href="http://www.icojoy.com/articles/19/#" >http://www.icojoy.com/articles/19/</a>
+    </p>
+    <p> Special Thanks to Doug Neiner and the InFieldLabels jQuery Plugin<br/>
+    which you find here:<br/>
+    <a href="http://fuelyourcoding.com/scripts/infield.html">http://fuelyourcoding.com/scripts/infield.html</a>
+    It was his Idea and code with use of the "for" attribute.
+    </p>
+    <script>
+  jQuery(function() {
+		jQuery(".clear").inputClearButtons();
+  });
+</script>
+
+</body>
+</html>
+
